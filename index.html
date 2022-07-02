@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons-wind.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input
+          type="text"
+          class="form-control"
+          inputmode="numeric"
+          id="latitude"
+          placeholder="latitude"
+          aria-label="latitude"
+          aria-describedby="basic-addon1"
+          value=""
+        />
+        <input
+          type="text"
+          class="form-control"
+          inputmode="numeric"
+          id="longitude"
+          placeholder="longitude"
+          aria-label="longitude"
+          aria-describedby="basic-addon1"
+          value=""
+        />
+      </nav>
+    </header>
+    <div class="container">
+      <div class="part1">
+        <div class="flex">
+          <div class="get-weather">
+            <button id="get-btn" type="button">Get Weather</button>
+          </div>
+          <div class="btn-location">
+            <button id="btn-location" type="button">Use Your Location</button>
+          </div>
+          <div id="day-or-night" class="icon-dayornight">
+            <i class="wi wi-night-clear wi-fw"></i>
+          </div>
+          <div class="degree"><p id="degree">3°C</p></div>
+          <div class="address"><p id="location">Albuquerque, NM</p></div>
+          <div class="small-info">
+            <p id="rightnow-info">it is clear right now</p>
+          </div>
+          <div class="other-infos">
+            <p class="info">
+              Wind:<i class="wi wi-wind towards-45-deg"></i
+              ><span id="wind-speed"> 11.27 km/h</span>
+            </p>
+            <p class="info">
+              <i class="wi wi-sunrise"></i>Sunrise:<span id="sunrise-time"
+                >7:08 am</span
+              >
+            </p>
+            <p class="info">
+              <i class="wi wi-sunset"></i>Sunset:
+              <span id="sunset-time">5:31 pm</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="part2">
+        <div class="forecast"><p>5-Day Forecast</p></div>
+        <div class="days">
+          <p>
+            <span id="day1-icon"><i class="wi wi-day-cloudy"></i></span
+            ><br /><span id="day1">SUN</span>
+          </p>
+          <p>
+            <span id="day2-icon"><i class="wi wi-day-cloudy"></i></span
+            ><br /><span id="day2">MON</span>
+          </p>
+          <p>
+            <span id="day3-icon"><i class="wi wi-day-cloudy"></i></span
+            ><br /><span id="day3">TUE</span>
+          </p>
+          <p>
+            <span id="day4-icon"><i class="wi wi-day-sunny"></i></span
+            ><br /><span id="day4">WED</span>
+          </p>
+          <p>
+            <span id="day5-icon"><i class="wi wi-day-sunny"></i></span
+            ><br /><span id="day5">THU</span>
+          </p>
+        </div>
+        <div class="max-min-degree">
+          <div class="day">
+            <p>
+              <i class="fa-solid fa-caret-up"></i><br />
+              <span id="max-degree-day1" class="max-deg">13°</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-caret-down"></i><br />
+              <span id="min-degree-day1" class="min-deg">-2°</span>
+            </p>
+          </div>
+          <div class="day">
+            <p>
+              <i class="fa-solid fa-caret-up"></i><br />
+              <span id="max-degree-day2" class="max-deg">13°</span>
+            </p>
+            <p>
+              <i id="g" class="fa-solid fa-caret-down"></i><br />
+              <span id="min-degree-day2" class="min-deg">-2°</span>
+            </p>
+          </div>
+          <div class="day">
+            <p>
+              <i class="fa-solid fa-caret-up"></i><br />
+              <span id="max-degree-day3" class="max-deg">13°</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-caret-down"></i><br />
+              <span id="min-degree-day3" class="min-deg">-2°</span>
+            </p>
+          </div>
+          <div class="day">
+            <p>
+              <i class="fa-solid fa-caret-up"></i><br />
+              <span id="max-degree-day4" class="max-deg">13°</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-caret-down"></i><br />
+              <span id="min-degree-day4" class="min-deg">-2°</span>
+            </p>
+          </div>
+          <div class="day">
+            <p>
+              <i class="fa-solid fa-caret-up"></i><br />
+              <span id="max-degree-day5" class="max-deg">13°</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-caret-down"></i><br />
+              <span id="min-degree-day5" class="min-deg">-2°</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
